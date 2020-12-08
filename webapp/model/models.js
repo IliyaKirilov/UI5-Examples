@@ -10,6 +10,11 @@ sap.ui.define([
 			var oModel = new JSONModel(Device);
 			oModel.setDefaultBindingMode("OneWay");
 			return oModel;
+		},
+		createProductsModel: function () {
+			var productsPath = jQuery.sap.getModulePath("kpmg.home.Exercise2", "/model/products.json");
+			var productsModel = new JSONModel(productsPath);
+			return productsModel;
 		}
 
 	};
